@@ -2,7 +2,7 @@
 
 applications:
 - name: 05dbBoot
-  path: target/05dbBoot-0.0.1-SNAPSHOT.war
+  path: 05dbBoot/target/05dbBoot-0.0.1-SNAPSHOT.war
   memory: 2048M
   random-route: true
   buildpacks:
