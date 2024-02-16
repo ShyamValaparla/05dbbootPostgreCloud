@@ -1,9 +1,9 @@
 ---
 
 applications:
-- name: 05dbBoot
+- name: 05dbBootJenkins
   path: 05dbBoot/target/05dbBoot-0.0.1-SNAPSHOT.war
-  memory: 2048M
+  memory: 800M
   random-route: true
   buildpacks:
     - java_buildpack 
