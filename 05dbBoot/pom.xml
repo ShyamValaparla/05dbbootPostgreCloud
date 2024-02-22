@@ -47,63 +47,61 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-data-rest</artifactId>
-		    <version>3.2.2</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+			<version>3.2.2</version>
 		</dependency>
-		
-		<!-- Start Postgre backing  -->	
+
+
+
+
+		<!-- Start Postgre backing -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-cloudfoundry-connector -->
 		<dependency>
-		    <groupId>com.sap.hana.cloud</groupId>
-		    <artifactId>spring-cloud-cloudfoundry-hana-service-connector</artifactId>
-		    <version>1.0.4.RELEASE</version>
+			<groupId>com.sap.hana.cloud</groupId>
+			<artifactId>spring-cloud-cloudfoundry-hana-service-connector</artifactId>
+			<version>1.0.4.RELEASE</version>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa -->
-<dependency>
-    <groupId>org.eclipse.persistence</groupId>
-    <artifactId>org.eclipse.persistence.jpa</artifactId>
-    <version>4.0.2</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-spring-service-connector -->
+		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa -->
 		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-spring-service-connector</artifactId>
-		    <version>2.0.7.RELEASE</version>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.jpa</artifactId>
+			<version>4.0.2</version>
 		</dependency>
-				<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-cloudfoundry-connector</artifactId>
-		    <version>2.0.7.RELEASE</version>
-		    <scope>runtime</scope>
-		</dependency>
-<!-- https://mvnrepository.com/artifact/com.sap.cloud.db.jdbc/ngdbc -->
-<dependency>
-    <groupId>com.sap.cloud.db.jdbc</groupId>
-    <artifactId>ngdbc</artifactId>
-    <version>2.19.16</version>
-    <type>pom</type>
-</dependency>
-		<!-- https://mvnrepository.com/artifact/com.sap.cloud.db.jdbc/ngdbc anubhav's-->
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-spring-service-connector -->
 		<dependency>
-		    <groupId>com.sap.cloud.db.jdbc</groupId>
-		    <artifactId>ngdbc</artifactId>
-		    <version>2.7.13</version>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-spring-service-connector</artifactId>
+			<version>2.0.7.RELEASE</version>
 		</dependency>
-				<dependency>
-		    <groupId>com.sap.hana.cloud</groupId>
-		    <artifactId>spring-cloud-cloudfoundry-hana-service-connector</artifactId>
-		    <version>1.0.4.RELEASE</version>
-		</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
-<dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-dbcp2</artifactId>
-    <version>2.11.0</version>
-</dependency>
 
-<!-- END Postgre backing  -->		
-		
+		<!-- https://mvnrepository.com/artifact/com.sap.cloud.db.jdbc/ngdbc -->
+
+		<!-- https://mvnrepository.com/artifact/com.sap.cloud.db.jdbc/ngdbc anubhav's -->
+		<dependency>
+			<groupId>com.sap.cloud.db.jdbc</groupId>
+			<artifactId>ngdbc</artifactId>
+			<version>2.7.13</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.hana.cloud</groupId>
+			<artifactId>spring-cloud-cloudfoundry-hana-service-connector</artifactId>
+			<version>1.0.4.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
+		<!-- END Postgre backing -->
+
+
+
+
+
+
 	</dependencies>
 
 	<build>
