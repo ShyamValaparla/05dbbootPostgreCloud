@@ -1,6 +1,5 @@
 package com.shyamPck.configuration;
 
-import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,7 +8,6 @@ import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.cloud.config.java.AbstractCloudConfig;
 import org.springframework.cloud.service.relational.DataSourceConfig;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +16,6 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 import com.shyamPck.entities.Vendor;
-import com.zaxxer.hikari.HikariDataSource;
 
 import jakarta.persistence.EntityManagerFactory;
 
@@ -65,25 +62,25 @@ public class DatabaseConfig extends AbstractCloudConfig {
 				"TomcatDbcpPooledDataSourceCreator");
 
 		DataSourceConfig dbConfig = new DataSourceConfig(dataSourceNames);
-		// DataSource hikariDataSource = connectionFactory().dataSource(dbConfig); // for postgre cloud
-		DataSource myConnection = DataSourceBuilder.create().type(HikariDataSource.class)
-				.driverClassName(com.sap.db.jdbc.Driver.class.getName()).url(hostname).username(username)
-				.password(password).build();
-
-		try {
-			myConnection.getConnection().setSchema(schemaname);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		DataSource hikariDataSource = connectionFactory().dataSource(dbConfig); // for postgre cloud
+//		DataSource myConnection = DataSourceBuilder.create().type(HikariDataSource.class)
+//				.driverClassName(com.sap.db.jdbc.Driver.class.getName()).url(hostname).username(username)
+//				.password(password).build();
+//
+//		try {
+//			myConnection.getConnection().setSchema(schemaname);
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
 		cloudFoundryDataSourceConfigLogger.info("Detected Host name is : " + this.hostname);
 		cloudFoundryDataSourceConfigLogger.info("Detected port name is : " + this.port);
 		cloudFoundryDataSourceConfigLogger.info("Detected Schema name is : " + this.schemaname);
 		cloudFoundryDataSourceConfigLogger.info("Detected User name is : " + this.username);
 
-		//return hikariDataSource; // for postgre cloud
-		return myConnection;
+		return hikariDataSource; // for postgre cloud
+		// return myConnection;
 
 	}
 
